@@ -1,0 +1,15 @@
+.flex-container-product-page{
+    display: flex;
+}
+.container-product-imgs{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    height: 500px;
+}
+.container-product-description{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 193, 127);
+    height: 500px;
+}

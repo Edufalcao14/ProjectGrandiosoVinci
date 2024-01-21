@@ -1,0 +1,300 @@
+@use 'color';
+@use 'responsive';
+@use 'fonts';
+ 
+.main{
+    font-family: fonts.$regular-police;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #000000;
+}
+
+.container-products{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    margin: 5% 10%;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    height: 120%;
+}
+.product-card{
+    width: 400px;
+    height: 300px;
+    flex-grow: 1;
+    flex-basis: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 10% 5%;
+    font-family:fonts.$regular-police;
+}
+.container-products h1,h2 {
+    margin-top: 3%;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal; 
+}
+.price-product{
+    font-family: fonts.$regular-police;
+    font-size: 25px;
+}
+
+h2{
+    font-size: 22px;
+}
+.link-products{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.container-searchbar-products{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    margin: 5% 10%;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border-bottom: 2px solid color.$primary-black ;
+}
+.product-img{
+    height: 250px;
+    width: 200px;
+}
+.product-title{
+    padding-top: 2%;
+}
+.search-bar {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.search-bar input {
+    font-family: fonts.$regular-police;
+    width: 80%;
+    padding: 10px;
+    border: 3px solid color.$primary-black;
+    border-radius: 3px;
+}
+
+.search-bar button {
+    width: 18%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: white;
+    font-family: fonts.$regular-police;
+    background-color: #ffffff;
+    border-style: solid;
+    border-radius: 5px;
+    border : 1px solid  color.$primary-black;
+    color: color.$text-search;
+    cursor: pointer;
+}
+
+.product-filter {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.dropbtn {
+    font-family: fonts.$regular-police;
+    background-color: #ffffff;
+    border-style: solid;
+    border-radius: 3px;
+    border : 3px solid  color.$primary-black;
+    color: color.$text-search;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content input {
+    font-family: fonts.$regular-police;
+    color: color.$text-search;
+    color: black;
+    padding: 20px 80px;
+    width: 100%;
+    text-decoration: none;
+    display: block;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    background-color: color.$primary-white;
+  }
+  
+  .dropdown-content input:hover {
+    background-color: color.$primary-black;
+    color: color.$primary-white;
+    cursor: pointer;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #000000;
+    color: color.$primary-white;
+  }
+.input-search-bar{
+    margin: 2%;
+}
+.showProduct{
+    padding-bottom: 10%;
+}
+//----------------------- Responsivite-------------------------------
+
+@include responsive.Phone{
+    .container-searchbar-products{
+        display: flex;
+        flex-direction: column;
+    }
+    .search-bar{
+        width: 100%;
+    }
+    
+    .search-bar button {
+        width: 30%;
+        border: 3px solid color.$primary-black;
+        border-radius: 3px;
+        font-size: smaller;
+    }
+    .search-bar input {
+        width: 70%;
+        border: 3px solid color.$primary-black;
+        border-radius: 3px;
+        font-size: smaller;
+    }
+    .product-filter {
+            width: 100%;
+            justify-content: space-between;
+    }
+    .dropbtn{
+        margin: 10%;
+        padding: 5px;
+        height: 20%;
+        font-size: 10px;
+    }
+    .dropdown-content a{
+        font-size: smaller;
+        padding: 10px 40px;
+    }
+    .product-title{
+        font-size: 17px !important;
+    }
+    .price-product{
+        font-size: 14px !important;
+    }
+    .link-products{
+        border-bottom: 2px solid rgba(96, 96, 96, 0.336);
+    }
+}
+
+@include responsive.Tablet{
+    .container-searchbar-products{
+        display: flex;
+        flex-direction: column;
+    }
+    .search-bar{
+        width: 100%;
+    }
+    
+    .search-bar button {
+        width: 30%;
+        border: 3px solid color.$primary-black;
+        border-radius: 3px;
+        font-size: smaller;
+    }
+    .search-bar input {
+        width: 70%;
+        border: 3px solid color.$primary-black;
+        border-radius: 3px;
+        font-size: smaller;
+    }
+    .product-filter {
+            width: 100%;
+            justify-content: center;
+    }
+    .dropbtn{
+        margin: 10%;
+        padding: 5px;
+        height: 20%;
+        font-size: 10px;
+    }
+    .dropdown-content a{
+        font-size: smaller;
+        padding: 10px 40px;
+    }
+}
+@include responsive.LaptopOld{
+    .container-searchbar-products{
+        display: flex;
+        flex-direction: column;
+    }
+    .search-bar{
+        width: 100%;
+    }
+    
+    .search-bar button {
+        width: 30%;
+        border: 3px solid color.$primary-black;
+        border-radius: 3px;
+        font-size: smaller;
+    }
+    .search-bar input {
+        width: 70%;
+        border: 3px solid color.$primary-black;
+        border-radius: 3px;
+        font-size: smaller;
+    }
+    .product-filter {
+            width: 100%;
+            justify-content: center;
+    }
+    .dropbtn{
+        margin: 10%;
+        padding: 5px;
+        height: 20%;
+        font-size: 10px;
+    }
+    .dropdown-content a{
+        font-size: smaller;
+        padding: 10px 40px;
+    }
+}
+

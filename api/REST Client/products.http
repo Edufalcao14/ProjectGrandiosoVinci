@@ -1,0 +1,82 @@
+### Read all Products with File variable
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/product
+
+### get Product 
+GET {{baseUrl}}product/getProduct/1
+
+### get Product order bu price
+GET {{baseUrl}}/products?order=price
+
+### get Product order bu price desc
+GET {{baseUrl}}/products?order=-price
+
+### get Product order bu name asc
+GET {{baseUrl}}/products?order=name
+
+### get Product order by name desc
+GET {{baseUrl}}/products?order=-name
+
+### get Product by category gender
+GET {{baseUrl}}/products?category=woman
+
+### get Product by category gender
+GET {{baseUrl}}/products?category=man
+
+### get Product by category of object
+GET {{baseUrl}}/products?category=watches
+
+### get Product by category of object
+GET {{baseUrl}}/products?category=Bags
+
+### get Product by category of object
+GET {{baseUrl}}/products?category=cosmetics
+
+### get Products by name
+GET {{baseUrl}}/products?name=rolex
+
+### get Products with not full name
+GET {{baseUrl}}/products?name=rolex
+
+### get Products with not full name
+GET {{baseUrl}}/products?brand=cartier
+
+### get Products with not full name
+GET {{baseUrl}}/products?brand=rolex
+
+### get Products with not full name
+GET {{baseUrl}}/products?brand=louisvuitton
+
+### post add product
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+    "name": "Prada Test",
+    "price": 489.99,
+    "description": "Sac pour femme",
+    "categorie": "Bags",
+    "imgList": [],
+    "subcategory": ["Prada", "Man"],
+    "model3D": "ArmaniCode"
+}
+
+### delete product
+DELETE {{baseUrl}}/products/4
+
+### patch add product
+PATCH  {{baseUrl}}/products/4
+Content-Type: application/json
+
+{
+    "name": "Armani Code Patch",
+    "price": 289.99,
+    "description": "Le parfum qui vous rend unique.",
+    "categorie": "Cosmetic",
+    "imgList": [],
+    "subcategory": ["Armani", "Man"],
+    "model3D": "ArmaniCode"
+}
+
+### get Product 
+GET {{baseUrl}}/subCategories

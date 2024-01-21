@@ -1,0 +1,70 @@
+@baseUrl = http://localhost:3000
+
+
+ ### get all info on user
+GET {{baseUrl}}/users
+
+### Try to login an unknow user
+POST {{baseUrl}}/auths/login
+Content-Type: application/json
+
+{
+    "email": "unknown",
+    "password":"admin"
+}
+
+### Login the default admin
+POST {{baseUrl}}/auths/login
+Content-Type: application/json
+
+{
+    "email":"admin@example.com",
+    "password":"admin"
+}
+
+
+
+
+### Create the manager user
+POST {{baseUrl}}/auths/register
+Content-Type: application/json
+
+{
+    "firstname": "manager",
+    "lastname": "manager",
+    "email":"manager@manager",
+    "password":"manager",
+    "address": "rue neuve 1000, louvain n10 ",
+    "birthdate": "2000, 08, 22"
+}
+
+### Login the manager user
+POST {{baseUrl}}/auths/login
+Content-Type: application/json
+
+{
+    "email":"manager@manager",
+    "password":"manager"
+}
+
+### get all info on user
+GET {{baseUrl}}/user/3
+
+
+### get all info on user
+GET {{baseUrl}}/user?email=Luc.Dupont@example.com
+
+### update user info
+PATCH {{baseUrl}}/user/onChange/3
+Content-Type: application/json
+
+{
+"firstname": "Pepijn",
+"lastname": "Smeding",
+"email": "pepijn.smeding@student.vinci.be",
+"street": "kapucijnendreef, 36",
+"city": "Overijse",
+"zipcode": "3090",
+"country": "Belgium",
+"password": "$2b$10$fsaTwXuGCUwqNCJ9G7.62.muH2zXb9p88wtLvaWdykwX2AyQlC/g6"
+}

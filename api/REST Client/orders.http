@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:3000
+
+### POST add order 
+
+POST {{baseUrl}}/order/addOrder
+Content-Type: application/json
+
+{
+    "id": 1,
+    "userName": "Renaux",
+    "payementMethod": "paypal"
+
+}
+
+
+### get all orders of user
+GET {{baseUrl}}/order/getOrdersOfUser/3

@@ -1,0 +1,28 @@
+@use 'color';
+@use 'responsive';
+@use 'fonts';
+
+.background2 {
+    padding: 5%;
+    background-image: url('../img/user/backgroundForm.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0%;
+    font-family: fonts.$regular-police;
+  }
+
+  .backgroundForm2 {
+    background-image: url('../img/user/background.png');
+  }
+
+  .titleChangeInfo{
+    color: #FFFF;
+    padding-bottom: 15px;
+  }
+
+
+  @include responsive.BigScreen{
+    .background{
+      height: 930px;
+    }
+  }

@@ -1,0 +1,107 @@
+@use 'color';
+@use 'responsive';
+@use 'fonts';
+
+h1{
+  font-family: fonts.$regular-police;
+}
+.addToCart{
+  font-family: fonts.$regular-police;
+}
+
+.lead{
+  font-family: fonts.$regular-police;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.price-product-single{
+  font-family: fonts.$regular-police;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.container-img-product{
+  object-fit: contain;
+}
+.img-product {
+  width: 400px;
+  height: 560px;
+ 
+}
+
+.product{
+  width: 400px;
+  height: 300px;
+  flex-direction: column;
+  text-align: center;   
+  justify-content: left;
+}
+.container-btn-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin-top: 10%;
+}
+.btn-2{
+  font-family: fonts.$regular-police;
+  background-color: #ffffff; /* Green */
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+
+ 
+}
+.btn-2:hover{
+  background-color: #000000;
+  color: white;
+ 
+}
+.container-btn-back{
+  background-color: transparent;
+  padding: 1%;
+}
+.btn-back{
+  height: 60px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: black;
+  color: #ffffff;
+  font-family: fonts.$regular-police;
+  font-weight: 400; 
+}
+.btn-back:hover{
+  height: 70px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border-color: #000000;
+  }
+  .div3D{
+    display: flex;
+    flex-direction: column;
+    height: 950px;
+    text-align: center;
+    background-image: url('../img/login-register/degrade.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .product-unavailable{
+    text-align: center;
+    padding-top: 10%;
+  }
+//----------------------- Responsivite-------------------------------
+
+@include responsive.Phone{
+  .container-img-product{
+    object-fit: contain;
+  }
+  .img-product {
+   
+  }
+}

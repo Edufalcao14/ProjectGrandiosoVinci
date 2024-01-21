@@ -1,0 +1,71 @@
+@use 'color';
+@use 'responsive';
+@use 'fonts';
+
+.footer-container {
+  position: static;
+    bottom: 0px;
+    width: 100%;
+    background-color: black; 
+  }
+  
+  .footer-content {
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+  }
+  
+  .left-text {
+    color: white; 
+  }
+  
+  .right-text {
+    display: flex;
+    justify-content: space-between;
+    color: white; 
+  }
+  .legal-privacy{
+    padding-right: 20px ;
+  }
+  .centered-image {
+    display: block;
+    margin: 0 auto; 
+  }
+
+  .textPrivacy {
+    font-family: fonts.$regular-police;
+    max-width: 1200px; /* Choisissez la largeur maximale que vous préférez */
+    margin: 0 auto; /* Pour centrer le contenu horizontalement */
+  }
+  
+  .titlePrivacy{
+    font-family: fonts.$regular-police;
+    margin: 2%;
+  }
+
+  #legalPrivacyLink {
+    cursor: pointer;
+
+  }
+
+  @include responsive.Phone{
+    .footer-container {
+      position: relative;
+        bottom: 0px;
+        width: 100%;
+        background-color: black; 
+      }
+  }
+  @include responsive.BigScreen{
+    .footer-container {
+        position: sticky;
+          bottom: 0px;
+          width: 100%;
+          height: 200px;
+          background-color: black; 
+        }
+    
+    }

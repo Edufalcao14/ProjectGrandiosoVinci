@@ -1,0 +1,67 @@
+@use 'fonts';
+
+.checkout-modal{
+
+    .modal{
+        background-image: none;
+        background-color: none;
+        color: black;
+        background: transparent;
+        font: 10px fonts.$regular-police;  
+    }
+
+    .h5{
+        font: 15px fonts.$regular-police;  
+    }
+}
+
+.checkout-button{
+    color: white ;
+    font: 25px fonts.$regular-police;
+    background-color: black;
+    border-radius: 8px;
+    padding: 15px 27px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+#btnCheckout{
+    width: 100%;
+    color: white ;
+}
+#btnCheckout:hover{
+    color: rgb(0, 0, 0) !important;
+    background-color: rgb(255, 255, 255); 
+}
+.checkout-button:hover{
+    color: rgb(0, 0, 0) !important;
+    background-color: rgb(255, 255, 255); 
+    border: black solid 2px;
+}
+
+#popUp {
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: red; 
+    color: #fff; 
+    text-align: center; 
+    border-radius: 25px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%;
+    bottom: 100px;
+  }
+  
+  
+  #popUp.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+
+
+
+ 
